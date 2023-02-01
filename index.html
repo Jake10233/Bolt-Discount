@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<header>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</header>
+<html>
+<body>
+
+    <div class="BoltDiscount">
+        <h1>Bolt Discounts</h1>
+    </div>
+
+
+
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="card-image"></div>
+        <div class="card-text">
+            <span class="date">Bolt Discount</span>
+            <h2>Home Depot</h2>
+            <p>The Home Depot is a home improvement retailer that offers a wide range of building materials, home improvement products, and services.</p>
+        </div>
+        <div class="card-stats">
+            <div class="stat">
+                <div class="value">20%</div>
+                <div class="type">Fee</div>
+            </div>
+            <div class="stat border">
+                <div class="value">4</div>
+                <div class="type">Items</div>
+            </div>
+            <div class="stat">
+                <div class="value">$5k</div>
+                <div class="type">Limit</div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="card1" onclick="window.location.href = 'Store List/storelist.html';">
+        <div class="card-image card2"></div>
+        <div class="card-text card2">
+            <span class="date">Bolt Discount</span>
+            <h2>Apple</h2>
+            <p>Apple is a multinational technology company that designs, develops, and sells consumer electronics, computer software, and online services.</p>
+        </div>
+        <div class="card-stats card2">
+            <div class="stat">
+                <div class="value">20%</div>
+                <div class="type">Fee</div>
+            </div>
+            <div class="stat border">
+                <div class="value">4</div>
+                <div class="type">Items</div>
+            </div>
+            <div class="stat">
+                <div class="value">$5k</div>
+                <div class="type">Limit</div>
+            </div>
+        </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="card-image card3"></div>
+        <div class="card-text card3">
+            <span class="date">Bolt Discount</span>
+            <h2>Lululemon</h2>
+            <p>Lululemon is an athletic apparel company that creates high-quality, stylish workout clothing and accessories for men and women.</p>
+        </div>
+        <div class="card-stats card3">
+            <div class="stat">
+                <div class="value">20%</div>
+                <div class="type">Fee</div>
+            </div>
+            <div class="stat border">
+                <div class="value">4</div>
+                <div class="type">Items</div>
+            </div>
+            <div class="stat">
+                <div class="value">$5k</div>
+                <div class="type">Limit</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://plugged.pro/assets/bulma/0.8.2/js/bulma.js"></script>
+    <script src="https://plugged.pro/assets/plugged/js/plugged.js"></script>
+    <script type="text/javascript">
+        $('.tabs li').click(function (e) {
+            if ($(this).hasClass('is-active')) {
+                return;
+            }
+
+            let id = $(this).attr('id');
+
+            $('.tabs li.is-active').removeClass('is-active');
+            $(this).addClass('is-active');
+
+            $('.stores-usa').fadeOut();
+            $('.stores-ca').fadeOut();
+            $('.stores-uk').fadeOut();
+
+            $('.' + id).css("display", "flex").fadeIn();
+        });
+    </script>
+</body>
+</html>
